@@ -9,6 +9,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.ceti.movies.Fragments.ContactoFragment;
 import com.ceti.movies.Fragments.EstrenosFragment;
 import com.ceti.movies.Fragments.ProximoFragment;
 
@@ -23,19 +24,21 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         viewPager = (ViewPager) findViewById(R.id.viewPager);
         //viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager()));
         setupFragments(viewPager);
         tabLayout = (TabLayout) findViewById(R.id.tabLayout);
         tabLayout.setupWithViewPager(viewPager);
     }
+
     public void setupFragments(ViewPager viewPager){
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPagerAdapter.addFragment(new EstrenosFragment(),"Estrenos");
         viewPagerAdapter.addFragment(new ProximoFragment(),"Proximos");
+        viewPagerAdapter.addFragment(new ContactoFragment(),"Contacto");
         viewPager.setAdapter(viewPagerAdapter);
     }
+
     class ViewPagerAdapter extends FragmentPagerAdapter {
         private List<Fragment> listFragment = new ArrayList<>();
         private List<String> titles = new ArrayList<>();
