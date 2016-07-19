@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.ceti.movies.Fragments.EstrenosFragment;
+import com.ceti.movies.Fragments.ProximoFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     public void setupFragments(ViewPager viewPager){
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPagerAdapter.addFragment(new EstrenosFragment(),"Estrenos");
+        viewPagerAdapter.addFragment(new ProximoFragment(),"Proximos");
         viewPager.setAdapter(viewPagerAdapter);
     }
     class ViewPagerAdapter extends FragmentPagerAdapter {
