@@ -1,5 +1,6 @@
 package com.ceti.movies;
 
+import android.content.DialogInterface;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -8,7 +9,9 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Toast;
 
+import com.afollestad.materialdialogs.AlertDialogWrapper;
 import com.ceti.movies.Fragments.ContactoFragment;
 import com.ceti.movies.Fragments.EstrenosFragment;
 import com.ceti.movies.Fragments.ProximoFragment;
@@ -29,6 +32,23 @@ public class MainActivity extends AppCompatActivity {
         setupFragments(viewPager);
         tabLayout = (TabLayout) findViewById(R.id.tabLayout);
         tabLayout.setupWithViewPager(viewPager);
+
+        new AlertDialogWrapper.Builder(this)
+                .setTitle("Peliculas de estreno")
+                .setMessage("Deseas ir a ver las peliculas de estreno?")
+                .setPositiveButton("Ir",new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        viewPager.setCurrentItem(2);
+                        dialog.dismiss();
+                    }
+                })
+                .setNegativeButton("No gracias", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                }).show();
     }
 
     public void setupFragments(ViewPager viewPager){

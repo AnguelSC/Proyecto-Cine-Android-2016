@@ -4,6 +4,8 @@ public class Pelicula {
     private String Titulo;
     private int imagen;
 
+
+
     public Pelicula(String Titulo,int imagen){
         this.Titulo = Titulo;
         this.imagen = imagen;
