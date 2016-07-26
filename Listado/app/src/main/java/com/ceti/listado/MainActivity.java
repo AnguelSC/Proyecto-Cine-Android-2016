@@ -13,6 +13,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.VideoView;
 
+import com.ceti.listado.Modelos.Pasaje;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,6 +27,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         listView = (ListView) findViewById(R.id.lista);
         List<Pelicula> data = new ArrayList<>();
+
+
+        Pasaje nuevo = new Pasaje();
+        nuevo.setAsiento(1);
+        nuevo.setNumero(14);
+        nuevo.setPersona();
+
         data.add(new Pelicula("Pelicula Estreno",R.drawable.buscandoadory));
         data.add(new Pelicula("Pelicula Estreno",R.drawable.buscandoadory));
         data.add(new Pelicula("Pelicula Estreno",R.drawable.buscandoadory));
