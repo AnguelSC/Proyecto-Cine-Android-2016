@@ -11,23 +11,21 @@ import android.widget.TextView;
 import com.ceti.movies.Models.Pelicula;
 import com.ceti.movies.R;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by Adrian-OTI on 8/08/2016.
  */
-public class EstrenoAdapter extends RecyclerView.Adapter<EstrenoAdapter.myViewHolder>{
+public class ProximoAdapter extends RecyclerView.Adapter<ProximoAdapter.myViewHolder>{
     private List<Pelicula> list = new ArrayList<>();
-    public EstrenoAdapter(List<Pelicula> list){
+    public ProximoAdapter(List<Pelicula> list){
         this.list = list;
     }
     @Override
     public myViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.simple_estreno, parent, false);
+                .inflate(R.layout.simple_proximo, parent, false);
         myViewHolder vh = new myViewHolder(v);
         return vh;
     }
