@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.afollestad.materialdialogs.AlertDialogWrapper;
 import com.ceti.movies.Fragments.ContactoFragment;
 import com.ceti.movies.Fragments.EstrenosFragment;
+import com.ceti.movies.Fragments.ProductoFragment;
 import com.ceti.movies.Fragments.ProximoFragment;
 
 import java.util.ArrayList;
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         viewPagerAdapter.addFragment(new EstrenosFragment(),"Estrenos");
         viewPagerAdapter.addFragment(new ProximoFragment(),"Proximos");
         viewPagerAdapter.addFragment(new ContactoFragment(),"Contacto");
+        viewPagerAdapter.addFragment(new ProductoFragment(),"Productos");
         viewPager.setAdapter(viewPagerAdapter);
     }
 

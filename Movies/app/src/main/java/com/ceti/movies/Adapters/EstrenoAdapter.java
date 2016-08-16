@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.Image;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -85,6 +86,12 @@ public class EstrenoAdapter extends RecyclerView.Adapter<EstrenoAdapter.myViewHo
                 context.startActivity(intent);
             }
         });
+        holder.card_view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context,"CLick",Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     @Override
@@ -97,6 +104,7 @@ public class EstrenoAdapter extends RecyclerView.Adapter<EstrenoAdapter.myViewHo
         private TextView resumen;
         private ImageButton favorito;
         private ImageButton ver;
+        private CardView card_view;
         private Context context;
         public myViewHolder(View itemView) {
             super(itemView);
@@ -104,6 +112,7 @@ public class EstrenoAdapter extends RecyclerView.Adapter<EstrenoAdapter.myViewHo
             imagen = (ImageView) itemView.findViewById(R.id.imagen);
             resumen = (TextView) itemView.findViewById(R.id.resumen);
             favorito = (ImageButton) itemView.findViewById(R.id.favorito);
+            card_view = (CardView) itemView.findViewById(R.id.card_view);
             ver = (ImageButton) itemView.findViewById(R.id.ver);
         }
 

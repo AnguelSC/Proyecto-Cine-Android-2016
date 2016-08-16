@@ -27,23 +27,23 @@ public class ProximoFragment extends Fragment {
     private List<Pelicula> lista = new ArrayList<>();
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_proximo,container,false);
+        View view = inflater.inflate(R.layout.fragment_proximo, container, false);
         mRecyclerView = (RecyclerView) view.findViewById(R.id.my_recycler_view);
         mSwipe = (SwipeRefreshLayout) view.findViewById(R.id.refrescar);
-        mRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(),2));
-        lista.add(new Pelicula("0001","El conjuro 2","30-11-2016",R.drawable.portada));
-        lista.add(new Pelicula("0002","El conjuro 2","30-11-2016",R.drawable.portada));
-        lista.add(new Pelicula("0003","El conjuro 2","30-11-2016",R.drawable.portada));
-        lista.add(new Pelicula("0004","El conjuro 2","30-11-2016",R.drawable.portada));
-        lista.add(new Pelicula("0005","El conjuro 2","30-11-2016",R.drawable.portada));
-        lista.add(new Pelicula("0006","El conjuro 2","30-11-2016",R.drawable.portada));
+        mRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
+        lista.add(new Pelicula("0001", "El conjuro 2", "30-11-2016", R.drawable.portada));
+        lista.add(new Pelicula("0002", "El conjuro 2", "30-11-2016", R.drawable.portada));
+        lista.add(new Pelicula("0003", "El conjuro 2", "30-11-2016", R.drawable.portada));
+        lista.add(new Pelicula("0004", "El conjuro 2", "30-11-2016", R.drawable.portada));
+        lista.add(new Pelicula("0005", "El conjuro 2", "30-11-2016", R.drawable.portada));
+        lista.add(new Pelicula("0006", "El conjuro 2", "30-11-2016", R.drawable.portada));
         ProximoAdapter proximoAdapter = new ProximoAdapter(lista);
         mRecyclerView.setAdapter(proximoAdapter);
         mSwipe.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                lista.add(new Pelicula("0007","Los vengadores","Pelicula de acción no antes vista",R.drawable.portada));
-                lista.add(new Pelicula("0008","Los vengadores","Pelicula de acción no antes vista",R.drawable.portada));
+                lista.add(new Pelicula("0007", "Los vengadores", "Pelicula de acción no antes vista", R.drawable.portada));
+                lista.add(new Pelicula("0008", "Los vengadores", "Pelicula de acción no antes vista", R.drawable.portada));
                 ProximoAdapter proximoAdapter = new ProximoAdapter(lista);
                 mRecyclerView.setAdapter(proximoAdapter);
                 mSwipe.setRefreshing(false);
@@ -51,5 +51,4 @@ public class ProximoFragment extends Fragment {
         });
         return view;
     }
-
 }
