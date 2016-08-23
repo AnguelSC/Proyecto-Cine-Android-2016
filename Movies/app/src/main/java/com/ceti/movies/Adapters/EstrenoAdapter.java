@@ -3,7 +3,6 @@ package com.ceti.movies.Adapters;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.media.Image;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -17,8 +16,6 @@ import android.widget.Toast;
 import com.ceti.movies.DetallePeliculaActivity;
 import com.ceti.movies.Models.Pelicula;
 import com.ceti.movies.R;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;

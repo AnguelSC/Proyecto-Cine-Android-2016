@@ -1,0 +1,61 @@
+{
+  "project_info": {
+    "project_number": "400472683305",
+    "project_id": "movies-fe19c"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:400472683305:android:a0053a492311b8b2",
+        "android_client_info": {
+          "package_name": "com.ceti.movies"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4a5zJUUmntv8AMJUB1xaVrCBsiWlN7fU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:400472683305:android:650c023c8e54f2d3",
+        "android_client_info": {
+          "package_name": "com.ceti.movie"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4a5zJUUmntv8AMJUB1xaVrCBsiWlN7fU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

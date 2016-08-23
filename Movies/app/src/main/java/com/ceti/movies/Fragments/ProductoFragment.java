@@ -1,7 +1,6 @@
 package com.ceti.movies.Fragments;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
@@ -16,7 +15,6 @@ import com.ceti.movies.Models.Producto;
 import com.ceti.movies.R;
 import com.ceti.movies.Services.ProductoService;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 

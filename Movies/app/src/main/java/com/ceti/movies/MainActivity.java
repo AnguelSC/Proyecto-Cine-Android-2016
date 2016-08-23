@@ -5,17 +5,17 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import com.afollestad.materialdialogs.AlertDialogWrapper;
 import com.ceti.movies.Fragments.ContactoFragment;
 import com.ceti.movies.Fragments.EstrenosFragment;
 import com.ceti.movies.Fragments.ProductoFragment;
 import com.ceti.movies.Fragments.ProximoFragment;
+import com.ceti.movies.Utils.customHandler;
+import com.pushbots.push.Pushbots;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     TabLayout tabLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Pushbots.sharedInstance().init(this);
+        Pushbots.sharedInstance().setCustomHandler(customHandler.class);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         viewPager = (ViewPager) findViewById(R.id.viewPager);
